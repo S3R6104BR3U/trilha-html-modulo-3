@@ -11,7 +11,7 @@
 
     <div>   
         <div class="logo">
-            <img src="assets/images/logo.png" width="200" alt="logotipo da wikipédia"/>
+            <img src="assets/images/logo-wikicodepedia.png" width="200" alt="logotipo da wikicodepédia"/>
         </div>
     </div>
 
@@ -25,7 +25,8 @@
                 <li><a href="python.html">Python</a></li>
                 <li><a href="java.html">Java</a></li>
                 <li><a href="c-sharp.html">C#</a></li>
-                <li><a href="c-c++.html">C/C++</a></li>
+                <li><a href="c.html">C</a></li>
+                <li><a href="c-mais-mais.html">C++</a></li>
                 <li><a href="php.html">PHP</a></li>
                 <li><a href="#">TypeScript</a></li>
                 <li><a href="ruby.html">Ruby</a></li>
@@ -36,27 +37,111 @@
 
         <div class="main">
             <h1>TypeScript</h1>
-            
+            <p>
+                TypeScript é uma linguagem de programação de código aberto desenvolvida pela Microsoft. É um superconjunto 
+                sintático estrito de JavaScript e adiciona tipagem estática opcional à linguagem. Tipos fornecem uma maneira 
+                de descrever a forma de um objeto, fornecendo melhor documentação e permitindo que o TypeScript valide se seu 
+                código está funcionando corretamente. Como TypeScript é um superconjunto de JavaScript, os programas 
+                JavaScript existentes também são programas TypeScript válidos.
+            </p>
             <figure>
-                <img src="assets/images/logo-javascript.png" alt="logotipo do JavaScript, consite de um quadrado amarelo com as letras J e S pretas">
-                <figcaption>Logotipo do JavaScript</figcaption>
+                <img class="logo-linguagem" src="assets/images/logo-typescript.png" alt="logotipo da Linguagem TypeScript, consite de um quadrado azul com as letras T e S brancas">
+                <figcaption>Logotipo da liguagem TipyScript</figcaption>
             </figure>
             
             <p>
-                É baseada em ECMAScript, padronizada pela Ecma international nas especificações ECMA-262 e ISO/IEC 16262.
+                Foi considerada pelo público a 4ª linguagem "mais amada", de acordo com uma pesquisa conduzida pelo site 
+                Stack Overflow em 2018, e está entre as 15 linguagens mais populares, de acordo com uma pesquisa conduzida pela RedMonk.
+            </p>
+            <p>
+                Anders Hejlsberg, arquiteto da linguagem C# e criador das linguagens Delphi e Turbo Pascal, trabalhou no 
+                desenvolvimento do TypeScript. A linguagem pode ser usada para desenvolver aplicações JavaScript 
+                no lado cliente e lado servidor (Node.js ou Deno). Existem várias opções disponíveis para transcompilação. 
+                O TypeScript Checker padrão pode ser usado, ou o compilador Babel pode ser chamado para converter 
+                TypeScript em JavaScript.
+            </p>
+            <p>
+                TypeScript oferece suporte a arquivos de definição que podem conter informações de tipo de bibliotecas 
+                JavaScript existentes, assim como arquivos de cabeçalho C++ podem descrever a estrutura de arquivos de 
+                objeto existentes. Isso permite que outros programas usem os valores definidos nos arquivos como se 
+                fossem entidades TypeScript estaticamente digitadas. Existem arquivos de cabeçalho de terceiros para 
+                bibliotecas populares, como jQuery, MongoDB e D3.js. Cabeçalhos TypeScript para os módulos básicos do 
+                Node.js também estão disponíveis, permitindo o desenvolvimento de programas Node.js dentro do TypeScript.
             </p>
             <h2 id="historia">História</h2>
             <hr>
-            
-            
+            <p>
+                O TypeScript foi divulgado pela primeira vez em outubro de 2012 (na versão 0.8), após dois anos de 
+                desenvolvimento interno na Microsoft.
+            </p>
+            <p>
+                Logo após o anúncio, Miguel de Icaza elogiou a linguagem em si, mas criticou a falta de suporte maduro 
+                a IDE da Microsoft, Visual Studio, que não estava disponível no Linux e no OS X naquela época. Em abril 
+                de 2021 há suporte em outras IDEs e editores de texto, incluindo Emacs, Vim, Webstorm, Atom e o próprio 
+                Visual Studio Code da Microsoft.
+            </p>
+            <p>TypeScript 0.9, lançado em 2013, adicionou suporte para tipos genéricos (generic types).</p>
+            <p>
+                TypeScript 1.0 foi lançado na conferência de desenvolvedores Build da Microsoft em 2014. O Update 2 
+                do Visual Studio 2013 passa a fornecer suporte integrado para TypeScript.
+            </p>
+            <p>
+                Em julho de 2014, a equipe de desenvolvimento anunciou um novo compilador TypeScript, alegando ganhos 
+                de desempenho de 5 vezes. Simultaneamente, o código-fonte, que estava inicialmente hospedado no 
+                CodePlex, foi movido para o GitHub.
+            </p>
+            <p>
+                Em 22 de setembro de 2016, o TypeScript 2.0 foi lançado; ele introduziu vários recursos, incluindo a 
+                capacidade de os programadores opcionalmente impedirem que variáveis recebam valores nulos, às vezes 
+                referido como o erro de bilhões de dólares.
+            </p>
+            <p>
+                TypeScript 3.0 foi lançado em 30 de julho de 2018, trazendo muitas adições à linguagem 
+                como expressões de spread, parâmetros rest com tipos de tupla, parâmetros rest genéricos 
+                e assim por diante.
+            </p>
+            <p>
+                TypeScript 4.0 foi lançado em 20 de agosto de 2020. Embora esta versão não tenha introduzido 
+                nenhuma alteração significativa, ele adicionou recursos de linguagem, como Custom JSX Factories 
+                e Variadic Tuple Types.
+            </p>
+            <h2 id="exemplo">Exemplo</h2>
+            <hr>
+            <h3>Genéricos</h3>
+            <p>Exemplo de uma árvore binária genérica em TypeScript:</p>
+            <div class="code">
+                <pre>
+                    <code>
+                        interface Tree<T> {
+                            value: T,
+                            left?: Tree<T>, // Tree<T> | undefined
+                            right?: Tree<T>,
+                          }
+                          
+                          let tree: Tree<number> = {
+                            value: 5.96,
+                            // left: undefined,
+                            right: { value: 1.0 },
+                          };
+                          
+                          // Desestrutura `value`, ignorando demais membros
+                          let { value } = tree;
+                          console.log(value);
+                          
+                          // Desestrutura membros, ignorando `value`
+                          let { left, right } = tree;
+                          console.log(`-> ${left?.value}`);
+                          console.log(`-> ${right?.value}`);
+                    </code>
+                </pre>
+            </div>
         </div>
-
+        
         <div class="anchors">
             <h2>Neste Artigo</h2>
             <ul>
                 <li><a href="#historia">História</a></li>
-                <li><a href="#marca-comercial">Marca comercial</a></li>
-                <li><a href="#caracteristicas">Características</a></li>
+                <li><a href="#exemplo">Exemplo</a></li>
             </ul>
         </div>
     </div>

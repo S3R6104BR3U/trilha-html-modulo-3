@@ -33,6 +33,58 @@ a { color:blue; text-decoration: none;}
 .sidebar {
     border-right: solid 1px #cdcdcd;
 }
+
 figure {
     text-align: center;
+}
+
+.logo-linguagem {
+    width: 250px;
+}
+
+table {
+    border: 1px solid gray;
+    margin: auto;
+}
+
+table th {
+    background-color: black;
+    color: #f1f1f1;
+    padding: 5px;
+}
+
+td {
+    border: 1px solid gray;
+    padding: 5px;
+}
+
+/*table tr:nth-child(even) {
+    background-color: skyblue;
+} */
+
+blockquote {
+    background-color: seashell;
+    border-left: 8px solid orange;
+    padding: 20px;
+}
+
+.list {
+    list-style-type: square;
+    margin-left: 40px;
+}
+
+code {
+    background-color: azure;
+    padding: 3px;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 2px;
+    margin: 3px;
+}
+
+.code {
+    background-color: azure;
+    padding: 30px;
+    margin: auto;
 }

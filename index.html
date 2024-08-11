@@ -11,7 +11,7 @@
 
     <div>   
         <div class="logo">
-            <img src="assets/images/logo.png" width="200" alt="logotipo da wikipédia"/>
+            <img src="assets/images/logo-wikicodepedia.png" width="200" alt="logotipo da wikicodepédia"/>
         </div>
     </div>
 
@@ -25,12 +25,13 @@
                 <li><a href="python.html">Python</a></li>
                 <li><a href="java.html">Java</a></li>
                 <li><a href="c-sharp.html">C#</a></li>
-                <li><a href="c-c++.html">C/C++</a></li>
+                <li><a href="c.html">C</a></li>
+                <li><a href="c-mais-mais.html">C++</a></li>
                 <li><a href="php.html">PHP</a></li>
-                <li><a href="#">TypeScript</a></li>
-                <li><a href="#">Ruby</a></li>
-                <li><a href="#">Swift</a></li>
-                <li><a href="#">Go</a></li>
+                <li><a href="typescript.html">TypeScript</a></li>
+                <li><a href="ruby.html">Ruby</a></li>
+                <li><a href="swift.html">Swift</a></li>
+                <li><a href="go.html">Go</a></li>
             </ul>
         </div>
 
@@ -46,8 +47,8 @@
                   em navegadores web. É também bastante utilizada do lado do servidor através de ambientes como o node.js.
             </p>
             <figure>
-                <img src="assets/images/logo-javascript.png" alt="logotipo do JavaScript, consite de um quadrado amarelo com as letras J e S pretas">
-                <figcaption>Logotipo do JavaScript</figcaption>
+                <img class="logo-linguagem" src="assets/images/logo-javascript.png" alt="logotipo do JavaScript, consite de um quadrado amarelo com as letras J e S pretas">
+                <figcaption>Logotipo da linguagem JavaScript</figcaption>
             </figure>
             <p>
                 Como uma linguagem multiparadigma, o JavaScript suporta estilos de programação orientados a eventos, 
@@ -331,7 +332,7 @@
                 JavaScript é oficialmente gerenciado pela Mozilla Foundation, e novos recursos de idioma são adicionados
                 periodicamente. No entanto, apenas alguns mecanismos JavaScript suportam esses novos recursos:
             </p>
-            <ul>
+            <ul class="list">
                 <li>Funções de propriedade getter e setter (suportadas pelo WebKit, Gecko, Opera, ActionScript e Rhino).</li>
                 <li>Cláusulas de captura condicional.</li>
                 <li>Protocolo iterador (adotado do Python).</li>
@@ -343,6 +344,50 @@
             </ul>
             <h2 id="uso-em-paginas-web">Uso em páginas Web</h2>
             <hr>
+            <p>
+                O uso primário de JavaScript é escrever funções que são embarcadas ou incluídas em páginas HTML e que 
+                interagem com o Modelo de Objeto de Documentos (DOM) da página. Alguns exemplos deste uso são:
+            </p>
+            <ul class="list">
+                <li>abrir uma nova janela (dialog) com controle programático sobre seu tamanho, posição e atributos;</li>
+                <li>validar valores de um formulário para garantir que são aceitáveis antes de serem enviados ao servidor;</li>
+                <li>mudar imagens à medida que o mouse se movimenta sobre elas.</li>
+            </ul>
+            <p>
+                Um recurso de interface útil baseada em janela, é um tipo de janela secundária da tela principal, ou 
+                janela principal, para solicitar ou exibir ao usuário determinadas informações complementares, 
+                semelhante a “caixa de diálogo” (dialog).
+            </p>
+            <p>
+                Existem dois tipos de associação entre uma janela de diálogo e a janela principal à qual está associada: 
+                "forma modal" (showModalDialog), quando a abertura da janela de diálogo flexível sobreposta a janela 
+                principal sem a necessidade de recarregar a página principal após o uso do modal, chamada de Lightbox, 
+                bloqueando a interação com a janela principal e esmaecendo/escurecendo o fundo até que o dialog seja 
+                encerrado; ou "forma não modal", em que pode haver interação concomitante nas duas janelas (principal 
+                e diálogo) sem bloqueio da principal, O caso mais comum é do dialog modal.
+            </p>
+            <p>
+                Pelo fato do código JavaScript rodar localmente no navegador do usuário, e não em um servidor remoto, 
+                o navegador pode responder a tais ações rapidamente, fazendo uma aplicação mais responsiva. Além disso, 
+                o código JavaScript pode detectar ações de usuário que o HTML sozinho não pode, tais como teclas 
+                pressionadas individualmente. Aplicações como Gmail tomam vantagem disso: muito da lógica da interface 
+                do usuário é escrita em JavaScript, e o JavaScript envia requisições de informação, tais como o conteúdo 
+                de um correio eletrônico, para o servidor. A tendência mais ampla de programação em Ajax explora de 
+                maneira similar este ponto forte. Uma JavaScript engine (também conhecida como interpretador JavaScript 
+                ou uma implementação JavaScript) interpreta código fonte JavaScript e o executa de forma adequada. 
+                A primeira implementação JavaScript foi criada por Brendan Eich na Netscape Communications Corporation, 
+                para o Navegador Netscape. A implementação, nomeada SpiderMonkey, é implementada em C e vem sendo atualizada 
+                para conformar com a edição 3 do ECMA-262. A implementação Rhino, criada primariamente por Norris Boyd 
+                (ex-empregado da Netscape; agora no Google) é uma implementação de JavaScript em Java. Rhino, como 
+                SpiderMonkey, é conformante com a terceira edição do ECMA-262.
+            </p>
+            <p>
+                Por ser o JavaScript a única linguagem que a maioria dos navegadores populares suportam, 
+                tem se tornado uma linguagem alvo para muitos frameworks em outras linguagens, a despeito 
+                do fato de não ter sido planejado para tal. Não obstante as limitações de desempenho 
+                inerente à sua natureza dinâmica, a crescente velocidade das implementações JavaScript 
+                tem feito da mesma uma prática linguagem intermediária.
+            </p>
 
         </div>
 

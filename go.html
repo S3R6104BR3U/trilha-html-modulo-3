@@ -11,7 +11,7 @@
 
     <div>   
         <div class="logo">
-            <img src="assets/images/logo.png" width="200" alt="logotipo da wikipédia"/>
+            <img src="assets/images/logo-wikicodepedia.png" width="200" alt="logotipo da wikicodepédia"/>
         </div>
     </div>
 
@@ -25,7 +25,8 @@
                 <li><a href="python.html">Python</a></li>
                 <li><a href="java.html">Java</a></li>
                 <li><a href="c-sharp.html">C#</a></li>
-                <li><a href="c-c++.html">C/C++</a></li>
+                <li><a href="c.html">C</a></li>
+                <li><a href="c-mais-mais.html">C++</a></li>
                 <li><a href="php.html">PHP</a></li>
                 <li><a href="typescript.html">TypeScript</a></li>
                 <li><a href="ruby.html">Ruby</a></li>
@@ -36,18 +37,84 @@
 
         <div class="main">
             <h1>Go</h1>
-            
-            <figure>
-                <img src="assets/images/logo-javascript.png" alt="logotipo do JavaScript, consite de um quadrado amarelo com as letras J e S pretas">
-                <figcaption>Logotipo do JavaScript</figcaption>
-            </figure>
-            
             <p>
-                É baseada em ECMAScript, padronizada pela Ecma international nas especificações ECMA-262 e ISO/IEC 16262.
+                Go é uma linguagem de programação criada pela Google e lançada em código livre em novembro de 2009. É uma linguagem 
+                compilada e focada em produtividade e programação concorrente, baseada em trabalhos feitos no sistema operacional 
+                chamado Inferno. O projeto inicial da linguagem foi feito em setembro de 2007 por Robert Griesemer, Rob Pike e Ken 
+                Thompson. Atualmente, há implementações para Windows, Linux, Mac OS X e FreeBSD.
             </p>
+            <figure>
+                <img src="assets/images/logo-go.png" alt="logotipo do JavaScript, consite das letras G e O em azul no estilo itálico">
+                <figcaption>Logotipo da linguagem Go</figcaption>
+            </figure>
             <h2 id="historia">História</h2>
             <hr>
-            
+            <p>
+                Go foi criado em 2009 e desde então vem recebendo muitas atualizações, tendo seu mais recente lançamento em 2 de Agosto de 2022, 
+                versão Go 1.19. Veja mais informações sobre versões anteriores em <a href="https://go.dev/project" target="_blank">https://go.dev/project</a>
+            </p>
+            <p>
+                Poucos dias após o lançamento da linguagem, Fancis McCabe, desenvolvedor da linguagem chamada Go!, solicitou uma 
+                mudança de nome da linguagem do Google, para evitar confusões. McCabe criou Go! em 2003, mas não registrou o nome.
+            </p>
+            <h2 id="design">Design</h2>
+            <hr>
+            <p>
+                A sintaxe de Go é semelhante a C e suas declarações são feitas com base em Pascal limpo; uma variação é a declaração 
+                de tipos, a ausência de parênteses em volta das estruturas <code>for </code>e <code>if</code>. Possui coletor de lixo. Seu modelo de concorrência 
+                é baseado no CSP de Tony Hoare, além de possuir características do cálculo pi, como passagem por canal.
+            </p>
+            <p>
+                Algumas funcionalidades ausentes são tratamento de exceção, Herança, programação genérica, <code>assert</code>e sobrecarga de métodos. 
+                Os autores expressam abertura para discutir programação genérica, mas argumentam abertamente contra asserções e defendem a 
+                omissão de herança de tipos em favor da eficiência. Ao contrário de Java, vetores associativos são parte intrínseca da 
+                linguagem, assim como strings.
+            </p>
+            <p>
+                Atualmente, há dois compiladores para Go. 6g e ferramentas complementares - conhecidos em conjunto como gc - são escritos em 
+                C, usando yacc e bison para análise sintática. Além do gc, há o gccgo, um compilador de Go com front-end C++ 
+                (utilizando um analisador sintático descendente recursivo) associado ao back-end padrão do GCC.
+            </p>
+            <h3>Orientação a objetos</h3>
+            <p>
+                É possível programar orientado a objetos, mas não da forma mais comum, pois Go não utiliza classes e sim estruturas. 
+                Na orientação a objetos, são criados métodos sem classes, interface sem hierarquia, e reutilização de código sem herança.
+            </p>
+            <h3>Funções</h3>
+            <p>
+                Go também possui funções como outras linguagens, as funções podem retornar valores únicos, múltiplos e até mesmo 
+                retornar outra função.
+            </p>
+            <h3>Exceções</h3>
+            <p>
+                O Go (ao contrário do Java) não possui exceções como try / catch / finally blocks. Ele possui tratamento 
+                estrito de erros com funções chamadas de panic e recover e uma instrução chamada defer.
+            </p>
+            <p>
+                Um uso comum de pânico é abortar se uma função retornar um valor de erro que não sabemos como (ou queremos) 
+                manipular. Executar este programa fará com que ele entre em pânico, imprima uma mensagem de erro e rastreie 
+                goroutine e saia com um status diferente de zero.
+            </p>
+            <p>
+                <code>recover</code> é uma função embutida que recupera o controle de uma gorout em pânico. Recuperar só é útil dentro 
+                de funções diferidas. Durante a execução normal, uma chamada para recuperar retornará nula e não terá outro 
+                efeito. Se a gorout atual estiver em pânico, uma chamada para recuperar capturará o valor dado ao pânico e 
+                retomará a execução normal. Um <code>defer</code> empurra uma chamada de função para uma lista. A lista de chamadas salvas 
+                é executada após a função circundante retornar. Adiar é comumente usado para simplificar funções que executam 
+                várias ações de limpeza.
+            </p>
+            <h3>Métodos</h3>
+            <p>
+                Go suporta <i>métodos</i> definidos em tipos struct. Métodos podem ser definidos para qualquer tipo de receptor ponteiro 
+                ou valor. Go trata automaticamente conversões entre valores e ponteiros para métodos de chamada. Você pode 
+                querer usar um ponteiro do tipo receptor para evitar a cópia de um método de chamada ou para permitir que o 
+                método faça mutação da estrutura recebida.
+            </p>
+            <h3>Goroutines</h3>
+            <p>
+                Goroutine é uma forma de implementação paralela, o comando usado é go, ele passa como parâmetro uma função 
+                para que ela seja executada em paralelo.
+            </p>
             
         </div>
 
@@ -55,8 +122,7 @@
             <h2>Neste Artigo</h2>
             <ul>
                 <li><a href="#historia">História</a></li>
-                <li><a href="#marca-comercial">Marca comercial</a></li>
-                <li><a href="#caracteristicas">Características</a></li>
+                <li><a href="#design">Design</a></li>
             </ul>
         </div>
     </div>
